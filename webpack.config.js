@@ -1,9 +1,17 @@
+const path = require('path');
+const webpack = require("webpack");
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+
+// Constant with our paths
+const paths = {
+    DIST: path.resolve(__dirname, 'dist'),
+    SRC: path.resolve(__dirname, 'src')
+};
+
 module.exports = {
-    entry: [
-        './src/index.js'
-    ],
+    entry: path.join(paths.SRC, 'index.js'),
     output: {
-        path: __dirname + '/dist',
+        path: paths.DIST,
         publicPath: '/',
         filename: 'bundle.js'
     },
@@ -19,7 +27,9 @@ module.exports = {
     resolve: {
         extensions: ['*', '.js', '.jsx']
     },
-    devServer: {
-        contentBase: './dist'
-    }
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: path.join(paths.SRC, 'index.html'),
+        }),
+    ],
 };
