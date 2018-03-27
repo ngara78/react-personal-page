@@ -1,7 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>The Minimal React Webpack Babel Setup</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="My personal page" />
+    <meta name="keywords" content="persona page, resume, developer, back-end, full-stack" />
+    <meta name="author" content="ngara78" />
+    <title>Personal Page</title>
+    <!--<link rel="shortcut icon" href="favicon.ico">-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700" rel="stylesheet">
+    <link rel="stylesheet" type="text/html" href="styles/normalize.css" />
+    <link rel="stylesheet" type="text/html" href="styles/base.css" />
+    <script>document.documentElement.className="js";
+        const browserCanUseCssVariables = () => {
+            let e,t=document.createElement("style");
+            return t.innerHTML="root: { --tmp-var: bold; }", document.head.appendChild(t),
+                e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),
+                t.parentNode.removeChild(t),e
+        };
+        browserCanUseCssVariables()||alert("Please view this site in a modern browser that supports CSS Variables.");
+    </script>
 </head>
 <body>
 <div id="app"></div>
