@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App'
 
-const title = 'Hello Boilerplate';
 
 ReactDOM.render(
-    <div>{title}</div>,
+    <App/>,
     document.getElementById('app')
 );
