@@ -24,17 +24,28 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader']
+                use: ['styles-loader', 'css-loader']
             },
             {
-                test: /\.(jpg|png)$/,
+                test: /\.(pdf|jpg|png|gif|svg|ico)$/,
                 use: {
-                    loader: "url-loader",
+                    loader: 'url-loader',
                     options: {
                         limit: 25000,
                     },
                 },
             },
+            {
+                test: /\.(jpg|png|gif|svg|pdf|ico)$/,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name]-[hash:8].[ext]'
+                        },
+                    },
+                ]
+            }
         ]
     },
     resolve: {

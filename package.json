@@ -6,6 +6,7 @@
     "watch": "webpack-dev-server --config ./webpack.config.js --mode development",
     "build": "webpack --display-error-details --progress --mode development",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "rimraf ./dist",
     "prettier": "prettier --write \"src/**/*{.ts,.js,.jsx,.json}\"",
     "print-versions": "echo Node-Version: && node --version && echo NPM-Version: && npm --version"
   },
@@ -22,8 +23,10 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
     "html-webpack-plugin": "^3.1.0",
     "prettier": "1.11.1",
+    "rimraf": "^2.6.2",
     "style-loader": "^0.20.3",
     "url-loader": "^1.0.1",
     "webpack": "^4.2.0",
