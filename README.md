@@ -1,1 +1,1 @@
-# minimal-react-boilerplate
+# personal page in react

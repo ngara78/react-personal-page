@@ -9,22 +9,21 @@ const MENU_OPTIONS = {
     CONTACT: 'Contact'
 };
 
-const MenuView = ({}) => {
-    const renderMenuOptions = () => {
-        let menuOptions = [];
-        Object.keys(MENU_OPTIONS).forEach(attrName => {
-            menuOptions.push(
-                <li className="menu__item" key={attrName}>
-                    <a className="menu__item-link" href="#">
-                        {MENU_OPTIONS[attrName]}
-                    </a>
-                </li>
-            );
-        });
-        console.log(menuOptions);
-        return menuOptions;
-    };
+const renderMenuOptions = () => {
+    let menuOptions = [];
+    Object.keys(MENU_OPTIONS).forEach(attrName => {
+        menuOptions.push(
+            <li className="menu__item" key={attrName}>
+                <a className="menu__item-link" href="#">
+                    {MENU_OPTIONS[attrName]}
+                </a>
+            </li>
+        );
+    });
+    return menuOptions;
+};
 
+const MenuView = () => {
     return (
         <nav className="menu">
             <ul className="menu__inner">{renderMenuOptions()}</ul>
